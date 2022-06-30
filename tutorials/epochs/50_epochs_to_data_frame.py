@@ -24,7 +24,8 @@ import seaborn as sns
 import mne
 
 sample_data_folder = mne.datasets.sample.data_path()
-sample_data_raw_file = sample_data_folder / 'MEG' / 'sample' / 'sample_audvis_filt-0-40_raw.fif'
+sample_data_raw_file = (sample_data_folder / 'MEG' / 'sample' /
+                        'sample_audvis_filt-0-40_raw.fif')
 raw = mne.io.read_raw_fif(sample_data_raw_file, verbose=False)
 
 # %%
@@ -33,7 +34,8 @@ raw = mne.io.read_raw_fif(sample_data_raw_file, verbose=False)
 # :ref:`tut-reject-epochs-section`), and segment the continuous data into
 # epochs:
 
-sample_data_events_file = sample_data_folder / 'MEG' / 'sample' / 'sample_audvis_filt-0-40_raw-eve.fif'
+sample_data_events_file = (sample_data_folder / 'MEG' / 'sample' /
+                           'sample_audvis_filt-0-40_raw-eve.fif')
 events = mne.read_events(sample_data_events_file)
 
 event_dict = {'auditory/left': 1, 'auditory/right': 2, 'visual/left': 3,

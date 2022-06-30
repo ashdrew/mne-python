@@ -38,7 +38,8 @@ from mne.preprocessing import compute_proj_ecg
 from mne_connectivity import envelope_correlation
 
 sample_data_folder = mne.datasets.sample.data_path()
-sample_data_raw_file = sample_data_folder / 'MEG' / 'sample' / 'sample_audvis_raw.fif'
+sample_data_raw_file = (sample_data_folder / 'MEG' / 'sample' /
+                        'sample_audvis_raw.fif')
 
 raw = mne.io.read_raw_fif(sample_data_raw_file)
 
